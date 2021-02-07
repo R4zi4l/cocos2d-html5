@@ -118,7 +118,7 @@ return {
 
     childrenOrderDirty: true,
     assignedZ: 0,
-    assignedZStep: 1 / 100,
+    assignedZStep: 1 / 100000,
 
     VertexType: VertexType,
 
