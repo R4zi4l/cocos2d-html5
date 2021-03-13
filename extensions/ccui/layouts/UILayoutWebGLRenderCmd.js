@@ -177,13 +177,13 @@
         currentStack.stack.push(currentStack.top);
         currentStack.top = this._stackMatrix;
 
-        node._clippingStencil.visit(this);
+        node._clippingStencil.visit(node);
 
         cc.renderer.pushRenderCommand(this._afterDrawStencilCmd);
     };
 
     proto.postStencilVisit = function () {
-        renderer.pushRenderCommand(cmd._afterVisitCmdStencil);
+        cc.renderer.pushRenderCommand(this._afterVisitCmdStencil);
         cc.current_stack.top = cc.current_stack.stack.pop();
     };
 
